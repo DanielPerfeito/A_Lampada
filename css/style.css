@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*Variaveis*/
+/*Mixins*/
+/*Geral*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Estilização*/
+#container {
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+#container #content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  height: 380px;
+}
+#container #content #lampada {
+  height: 70%;
+}
+#container #content h1 {
+  height: 180px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  font-family: "Madimi One";
+  font-size: 1.6rem;
+  color: #000000;
+  text-align: center;
+}
+#container #content #btn-troca-lampada {
+  padding: 10px;
+  font-family: "Madimi One";
+  font-size: 1.2rem;
+  color: #ff0000;
+  text-align: center;
+  background-color: rgb(241, 237, 237);
+  border: none;
+  box-shadow: 1px 1px 2px #000000;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+#container #content #btn-troca-lampada:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #ff0000;
+  box-shadow: inset 1px 2px #000000;
+}
+
+/*# sourceMappingURL=style.css.map */

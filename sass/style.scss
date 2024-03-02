@@ -1,0 +1,67 @@
+
+/*Variaveis*/
+
+$fonte-padrao: "Madimi One";
+
+/*Mixins*/
+@mixin display-content($display, $direction, $justify-content, $align-items, $gap){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
+
+@mixin text-style($font, $size, $color, $align){
+    font-family: $font;
+    font-size: $size;
+    color: $color;
+    text-align: $align;
+}
+
+/*Geral*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilização*/
+#container{
+    padding: 10px;
+    height: 100vh;
+    @include display-content(flex, column , center, center,0);
+
+    #content{
+        @include display-content(flex, column , space-between, center,0);
+        height: 380px;
+        
+        #lampada{
+            height: 70%;
+        }
+
+        h1{
+            height: 180px;
+            max-width: 500px;
+            @include display-content(flex, column ,center, center, 0);
+            @include text-style($fonte-padrao,1.6rem ,#000000 ,center);
+        }
+
+        #btn-troca-lampada{
+            padding: 10px;
+            @include text-style($fonte-padrao, 1.2rem , #ff0000 , center);
+            background-color: rgb(241, 237, 237);
+            border: none;
+            box-shadow: 1px 1px 2px #000000;
+            border-radius: 5px;
+            transition: .4s;
+
+            &:hover{
+                cursor: pointer;
+                color: #ffffff;
+                background-color: #ff0000;
+                box-shadow: inset 1px 2px #000000;
+            }
+        }
+    }
+}
